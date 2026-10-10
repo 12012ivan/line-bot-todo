@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>待辦小幫手｜開發紀錄</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft JhengHei", sans-serif;
+      color: #243044;
+      background: #f2f6fa;
+      line-height: 1.8;
+    }
+    header {
+      padding: 48px 20px;
+      color: white;
+      background: #315c7d;
+      text-align: center;
+    }
+    main {
+      max-width: 850px;
+      margin: 28px auto;
+      padding: 0 18px;
+    }
+    section {
+      margin-bottom: 20px;
+      padding: 22px;
+      background: white;
+      border-radius: 12px;
+    }
+    h2 { color: #315c7d; }
+    code {
+      padding: 2px 6px;
+      background: #edf2f7;
+      border-radius: 4px;
+    }
+    a { color: #1769aa; }
+    .note { color: #805b16; }
+    footer {
+      padding: 20px;
+      color: #607080;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>待辦小幫手</h1>
+    <p>LINE Bot 第一版｜開發紀錄與測試</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>專題介紹</h2>
+      <p>本專題嘗試製作一個待辦小幫手，讓使用者用簡單文字指令記錄待辦事項，並在輸入不完整或不支援的內容時收到提示。</p>
+      <p><strong>使用對象：</strong>想快速記下待辦事項的人。</p>
+      <p><strong>目前狀態：</strong>已完成在電腦命令提示字元執行的 Python 測試版本，尚未連接 LINE。</p>
+    </section>
+
+    <section>
+      <h2>核心功能與操作示範</h2>
+      <ul>
+        <li>輸入 <code>record: 星期五交報告</code>，程式回覆已記錄的待辦。</li>
+        <li>輸入 <code>record:</code>，程式提醒使用者補上待辦內容。</li>
+        <li>輸入其他文字，程式顯示使用提示。</li>
+        <li>輸入 <code>quit</code>，程式結束。</li>
+      </ul>
+      <p><strong>正常輸入：</strong>使用者輸入「record: 星期五交報告」→ Bot 回覆「Bot: Recorded - 星期五交報告」。</p>
+      <p><strong>不完整輸入：</strong>使用者輸入「record:」→ Bot 回覆「Bot: Please enter a task.」。</p>
+    </section>
+
+    <section>
+      <h2>開發過程</h2>
+      <ol>
+        <li>規劃待辦記錄、空白輸入提醒和不支援輸入提示。</li>
+        <li>使用 Python 完成命令提示字元測試版本。</li>
+        <li>測試正常輸入、空白輸入和不支援的輸入。</li>
+        <li>將程式與 README 說明放到 GitHub。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>AI 協作與檢查</h2>
+      <p><strong>使用工具：</strong>AI 對話工具協助整理開發步驟、README 說明和本頁內容。</p>
+      <p><strong>代表性指令：</strong>「請依照我的待辦 Bot 專題資料，整理一頁開發紀錄網頁，包含介紹、操作示範、開發過程、AI 協作、測試結果與限制；缺少的資料請標示待補，不要編造。」</p>
+      <p><strong>我的檢查：</strong>比對網頁內容與程式目前功能，並在命令提示字元實際輸入指令測試。</p>
+    </section>
+
+    <section>
+      <h2>測試結果</h2>
+      <p>請依命令提示字元的實際測試畫面，確認並補上「實際結果」；不要只用預期結果代替測試證明。</p>
+      <ul>
+        <li><strong>正常輸入：</strong><code>record: 星期五交報告</code>｜預期：顯示已記錄內容｜實際結果：請依測試畫面填寫。</li>
+        <li><strong>空白內容：</strong><code>record:</code>｜預期：提醒補上待辦｜實際結果：請依測試畫面填寫。</li>
+        <li><strong>不支援輸入：</strong><code>hello</code>｜預期：顯示使用提示｜實際結果：請依測試畫面填寫。</li>
+      </ul>
+      <p class="note">實測截圖：請在此處補上命令提示字元測試畫面，作為實測證明。</p>
+    </section>
+
+    <section>
+      <h2>心得、限制與下一步</h2>
+      <p>我學到如何用文字指令處理不同輸入，也了解測試時需要同時檢查正常、空白和不支援的情況。</p>
+      <p>目前程式只在命令提示字元執行，尚未連接 LINE，也沒有永久儲存待辦。下一步可改善輸入提示，並研究如何連接 LINE。</p>
+    </section>
+
+    <section>
+      <h2>成果連結</h2>
+      <p><a href="https://github.com/12012ivan/line-bot-todo">GitHub 專案：line-bot-todo</a></p>
+      <p>成果簡報：尚未製作。</p>
+    </section>
+  </main>
+
+  <footer>待辦小幫手｜課堂專題開發紀錄</footer>
+</body>
+</html>
